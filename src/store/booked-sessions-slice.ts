@@ -3,27 +3,32 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 export type BookedSession = { id: string; title: string; date: string };
 
 type BookedSessionState = {
-  session: BookedSession[];
+  sessions: BookedSession[];
 };
 
-const initialState: BookedSessionState = { session: [] };
+const initialState: BookedSessionState = { sessions: [] };
 
 const bookedSessionsSlice = createSlice({
   name: "bookedSessions",
   initialState,
   reducers: {
     addSession(state, actions: PayloadAction<BookedSession>) {
-      state.session.push(actions.payload);
+      const sessionExists = state.sessions.findIndex(
+        (session) => session.id === actions.payload.id
+      );
+
+      if (sessionExists === -1) {
+        state.sessions.push(actions.payload);
+      }
     },
 
     removeSession(state, actions: PayloadAction<{ id: string }>) {
-      const sessionIndex = state.session.findIndex(
+      const sessionIndex = state.sessions.findIndex(
         (session) => session.id === actions.payload.id
       );
 
       if (sessionIndex >= 0) {
-        console.log("first");
-        state.session.splice(sessionIndex, 1);
+        state.sessions.splice(sessionIndex, 1);
       }
     },
   },

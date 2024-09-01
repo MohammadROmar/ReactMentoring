@@ -1,6 +1,6 @@
-import studentsImg from "../assets/students.jpg";
-import listImg from "../assets/list.jpg";
-import certificateImg from "../assets/certificate.jpg";
+import studentsImg from "../assets/images/students.jpg";
+import listImg from "../assets/images/list.jpg";
+import certificateImg from "../assets/images/certificate.jpg";
 
 export type Mission = {
   image: string;

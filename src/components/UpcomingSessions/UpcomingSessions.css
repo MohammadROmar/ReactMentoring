@@ -1,0 +1,34 @@
+.upcoming-sessions-btn {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+  background: #555;
+  cursor: pointer;
+}
+
+.upcoming-sessions {
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.upcoming-sessions__title {
+  font-size: 1.3rem;
+  margin: 0.25rem 0;
+}
+
+.upcoming-sessions--empty__title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0.25rem;
+  opacity: 0.8;
+}
+
+.upcoming-sessions--empty__note {
+  text-align: center;
+  margin: 0.25rem;
+  opacity: 0.6;
+}

@@ -1,13 +1,13 @@
-import kickstartReact from "../assets/sessions/kickstart-react.jpg";
-import debugCode from "../assets/sessions/debug-code.jpg";
-import blueprintComponent from "../assets/sessions/blueprint-component.jpg";
-import stateMgmtFlow from "../assets/sessions/state-mgmt-flow.jpg";
-import hooks from "../assets/sessions/hooks.jpg";
-import styling from "../assets/sessions/styling.jpg";
-import dataFetching from "../assets/sessions/data-fetching.jpg";
-import reactTs from "../assets/sessions/react-ts.jpg";
-import performance from "../assets/sessions/performance.jpg";
-import dataStore from "../assets/sessions/data-store.jpg";
+import kickstartReact from "../assets/images/sessions/kickstart-react.jpg";
+import debugCode from "../assets/images/sessions/debug-code.jpg";
+import blueprintComponent from "../assets/images/sessions/blueprint-component.jpg";
+import stateMgmtFlow from "../assets/images/sessions/state-mgmt-flow.jpg";
+import hooks from "../assets/images/sessions/hooks.jpg";
+import styling from "../assets/images/sessions/styling.jpg";
+import dataFetching from "../assets/images/sessions/data-fetching.jpg";
+import reactTs from "../assets/images/sessions/react-ts.jpg";
+import performance from "../assets/images/sessions/performance.jpg";
+import dataStore from "../assets/images/sessions/data-store.jpg";
 
 export const SESSIONS = [
   {

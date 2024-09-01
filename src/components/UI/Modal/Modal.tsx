@@ -1,4 +1,13 @@
-import { forwardRef, type ReactNode, useImperativeHandle, useRef } from "react";
+import {
+  ComponentPropsWithoutRef,
+  forwardRef,
+  type ReactNode,
+  useImperativeHandle,
+  useRef,
+} from "react";
+
+import "./Modal.css";
+import { createPortal } from "react-dom";
 
 export type ModalHandler = {
   open: () => void;
@@ -7,10 +16,10 @@ export type ModalHandler = {
 
 type ModalProps = {
   children: ReactNode;
-};
+} & ComponentPropsWithoutRef<"dialog">;
 
 const Modal = forwardRef<ModalHandler, ModalProps>(function Modal(
-  { children },
+  { children, ...props },
   ref
 ) {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -34,10 +43,11 @@ const Modal = forwardRef<ModalHandler, ModalProps>(function Modal(
     };
   });
 
-  return (
-    <dialog ref={dialog} className="modal">
+  return createPortal(
+    <dialog ref={dialog} className="modal" {...props}>
       {children}
-    </dialog>
+    </dialog>,
+    document.getElementById("modal")!
   );
 });
 

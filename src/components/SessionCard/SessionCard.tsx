@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import "./SessionCard.css";
+
 type SessionCardProps = {
   id: string;
   title: string;

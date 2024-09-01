@@ -1,5 +1,7 @@
-import SessionCard from "../components/SessionCard.tsx";
-import { SESSIONS } from "../data/dummy-sessions.ts";
+import SessionCard from "../../components/SessionCard/SessionCard.tsx";
+import { SESSIONS } from "../../data/dummy-sessions.ts";
+
+import "./Sessions.css";
 
 export default function SessionsPage() {
   const sessions = SESSIONS.map((session) => (

@@ -1,0 +1,81 @@
+.main-footer {
+  width: 100vw;
+  height: 12rem;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  background: #222;
+}
+
+.social-media__accounts {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media__account-link {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.1rem;
+
+  border-radius: 50%;
+  background: #999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.social-media__account-link::before {
+  content: attr(data-social-name);
+
+  position: absolute;
+
+  padding: 0.25rem 0.5rem;
+
+  transform: rotate(20deg);
+
+  background: transparent;
+  border-radius: 5rem;
+
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+.social-media__account-link::after {
+  content: "";
+
+  position: absolute;
+
+  transform: rotate(20deg);
+
+  width: 0;
+  height: 0;
+
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid transparent;
+
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.social-media__account-link:hover {
+  background: var(--color);
+}
+
+.social-media__account-link:hover::before {
+  opacity: 1;
+  background-color: var(--color);
+  transform: translateY(-3rem) rotate(0);
+}
+
+.social-media__account-link:hover::after {
+  opacity: 1;
+  border-top-color: var(--color);
+  transform: translateY(-2rem) rotate(0);
+}

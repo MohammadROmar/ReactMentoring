@@ -1,0 +1,41 @@
+.error-element {
+  height: calc(100vh - 6.5rem);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-element__icon-wrapper {
+  width: 50%;
+  height: 50%;
+}
+
+.error-element__title {
+  margin: 0rem;
+
+  font-size: 2rem;
+  text-align: center;
+
+  color: #ff7575;
+}
+
+.error-element__error {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.error-element__navigation {
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+
+  color: white;
+  background: #555;
+  border-radius: 0.3rem;
+}

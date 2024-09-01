@@ -1,0 +1,33 @@
+.upcoming-session {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+
+  background: #333;
+  border-radius: 0.3rem;
+}
+
+.upcoming-session__title,
+.upcoming-session__date {
+  text-align: start;
+  margin: 0.25rem;
+}
+
+.upcoming-session__date {
+  opacity: 0.6;
+  display: block;
+}
+
+.upcoming-session__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.upcoming-session__cancel-btn {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

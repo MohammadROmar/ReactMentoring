@@ -1,0 +1,20 @@
+.modal_book-session {
+  cursor: pointer;
+  margin-left: 0.25rem;
+  padding: 0.25rem 0.5rem;
+
+  border: none;
+  color: whitesmoke;
+  border-radius: 0.3rem;
+  background-color: #333;
+}
+
+.session-page__booking {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+
+  background: #555;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}

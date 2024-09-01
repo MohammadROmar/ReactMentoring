@@ -1,0 +1,48 @@
+.main-header {
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  border-bottom: #555 0.05rem solid;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: #333;
+}
+
+.main-header__navigation-list {
+  list-style: none;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.main-header__navigation-link {
+  padding: 0.25rem 0;
+  text-decoration: none;
+
+  position: relative;
+}
+
+.main-header__navigation-link::after {
+  content: "";
+
+  width: 0;
+  height: 0.2rem;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  border-radius: 0.5rem;
+  transition: 300ms;
+}
+
+.main-header__navigation-link.active::after {
+  width: 100%;
+  background: white;
+}

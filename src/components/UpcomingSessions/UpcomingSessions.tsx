@@ -1,30 +1,23 @@
 import { useRef } from "react";
 
-import Modal, { type ModalHandler } from "./Modal.tsx";
+import Modal, { type ModalHandler } from "../UI/Modal/Modal.tsx";
+import UpcomingSessionsContent from "./UpcomingSessionsContent.tsx";
 
-import { useBookedSessionsSelector } from "../store/hooks.ts";
-import UpcomingSession from "./UpcomingSession.tsx";
+import "./UpcomingSessions.css";
 
 export default function UpcomingSessions() {
   const dialog = useRef<ModalHandler>(null);
 
-  const fetchedBookedSessions = useBookedSessionsSelector(
-    (state) => state.bookedSessions.session
-  );
-
-  const bookedSessions = fetchedBookedSessions.map((session) => (
-    <UpcomingSession session={session} key={session.id} />
-  ));
-
   return (
     <>
-      <Modal ref={dialog}>
+      <Modal ref={dialog} style={{ width: "50%" }}>
         <h2 className="upcoming-sessions__title">Upcoming Sessions</h2>
+        <UpcomingSessionsContent />
         <form method="dialog" className="modal__actions-form">
-          <ul className="upcoming-sessions">{bookedSessions}</ul>
           <button className="modal_close-button">Close</button>
         </form>
       </Modal>
+
       <button
         className="upcoming-sessions-btn"
         onClick={() => dialog.current?.open()}

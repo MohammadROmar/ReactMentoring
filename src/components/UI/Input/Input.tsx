@@ -1,4 +1,6 @@
-import { ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from "react";
+
+import "./Input.css";
 
 type InputProps = {
   id: string;

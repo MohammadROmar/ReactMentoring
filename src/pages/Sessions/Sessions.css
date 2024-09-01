@@ -1,0 +1,15 @@
+.sessions {
+  list-style: none;
+
+  background: #555;
+
+  margin: 2rem;
+  margin-top: 0;
+  padding: 1rem;
+
+  border-radius: 0.3rem;
+
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}

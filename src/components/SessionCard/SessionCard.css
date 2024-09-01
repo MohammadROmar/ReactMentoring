@@ -1,0 +1,48 @@
+.session {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.session__image {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.session__text-container {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #333;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.session__title {
+  text-align: center;
+  font-size: 1rem;
+
+  margin: 0 1rem;
+}
+
+.session__summary {
+  text-align: center;
+}
+
+.session__navigation {
+  width: max-content;
+
+  margin: 0.5rem;
+  padding: 0.5rem;
+
+  background: #555;
+  border-radius: 0.3rem;
+
+  text-decoration: none;
+}

@@ -1,0 +1,24 @@
+.mission {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mission__text-wrapper {
+  width: 70%;
+}
+
+.mission:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.mission__image {
+  width: 8rem;
+  height: 8rem;
+
+  border-radius: 50%;
+}
+
+.mission__description {
+  opacity: 0.6;
+}

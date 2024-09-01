@@ -1,9 +1,14 @@
 import { FormEvent, useRef } from "react";
 
-import Modal, { ModalHandler } from "./Modal";
-import Input from "./Input";
-import { useBookedSessionsDispatch } from "../store/hooks";
-import { addSession, type BookedSession } from "../store/booked-sessions-slice";
+import Modal, { ModalHandler } from "../UI/Modal/Modal.tsx";
+import Input from "../UI/Input/Input.tsx";
+import { useBookedSessionsDispatch } from "../../store/hooks.ts";
+import {
+  addSession,
+  type BookedSession,
+} from "../../store/booked-sessions-slice.ts";
+
+import "./BookSession.css";
 
 export default function BookSession({ session }: { session: BookedSession }) {
   const dialog = useRef<ModalHandler>(null);
@@ -11,9 +16,6 @@ export default function BookSession({ session }: { session: BookedSession }) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    // const formData = new FormData(event.currentTarget);
-    // const data = Object.fromEntries(formData);
 
     dispatch(addSession(session));
 

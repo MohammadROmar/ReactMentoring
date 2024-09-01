@@ -1,0 +1,39 @@
+.modal {
+  border: none;
+  border-radius: 0.3rem;
+  background: #555;
+  overflow: hidden;
+
+  animation: slide-in-from-bottom 0.5s;
+}
+
+.modal_close-button {
+  cursor: pointer;
+  margin-top: 0.5rem;
+
+  border: none;
+  background: none;
+}
+
+.modal__actions-form {
+  text-align: right;
+}
+
+.modal__title {
+  margin: 0;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
